@@ -29,8 +29,34 @@
         <button type="button" id="exportBtn" class="button button--quiet">
           Export team answer
         </button>
+        <button type="button" id="helpBtn" class="button button--icon" aria-label="How to play" title="How to play">
+          ?
+        </button>
       </div>
     </header>
+
+    <div id="helpDialog" class="help-dialog" role="dialog" aria-modal="true" aria-labelledby="helpTitle" hidden>
+      <div class="help-dialog__backdrop" data-help-close></div>
+      <section class="help-dialog__panel" tabindex="-1">
+        <div class="help-dialog__heading">
+          <div>
+            <span class="panel__label">How to play</span>
+            <h2 id="helpTitle">Build the AWS target architecture</h2>
+          </div>
+          <button type="button" id="closeHelpBtn" class="button button--icon" aria-label="Close help" title="Close">
+            x
+          </button>
+        </div>
+        <ol class="help-steps">
+          <li>Review the Azure reference layers on the left.</li>
+          <li>Drag AWS service cards from the palette into the matching target zones.</li>
+          <li>Click a card, then click a zone if dragging is awkward.</li>
+          <li>Use Check architecture to score your placement and highlight cards to revisit.</li>
+          <li>Reveal suggested answer when your team is ready to compare approaches.</li>
+          <li>Export team answer to save the board as JSON.</li>
+        </ol>
+      </section>
+    </div>
 
     <main class="workspace">
       <section class="panel reference-panel" aria-labelledby="referenceTitle">
